@@ -1,4 +1,8 @@
 form {
   background-color: aqua;
   color: blue;
+  text-align: center;
+}
+input {
+  border-radius: 4px;
 }
