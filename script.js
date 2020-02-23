@@ -39,11 +39,13 @@ function checkLocal() {
     for (let i = 0; i < nameProp.length - 1; i++) {
       user[nameProp[i]] = prop[i];
       formData[i].innerHTML = ("value", prop[i]);
+      if (online != true) {
+        info.innerHTML = Object.values(user);
+      }
 
       console.log(formData[i].textContent);
     }
 
-    info.innerHTML = Object.values(user);
     console.log(user);
     console.log(Object.values(user));
   }
@@ -55,3 +57,6 @@ let clear = document.getElementById("clear");
 clear.addEventListener("click", delItem);
 let getData = document.getElementById("getData");
 getData.addEventListener("click", checkLocal);
+if (online == true) {
+  divClear.remove();
+}
